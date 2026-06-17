@@ -1,0 +1,183 @@
+
+"""
+# Print name, age, boolean
+
+print("krishna")
+print(f"my age is : {39}")
+
+name = "Krishna"
+age  =  "35"
+
+city =  "Pune"
+
+Company = "ACL Digital"
+
+print(f"My name is : {name}, My age is : {age} , I live in {city} city and i work in {Company}")
+
+username = "krishna"
+password = "@123"
+
+print(username=="krishna")
+print(password=="@12")
+"""
+
+
+"""
+# Create username & password variables
+
+username = "Krishna.goswami@acldigital.com"
+Password = "@krish123"
+
+print(f"Username is : {username}")
+print(f"Password is : {Password}")
+"""
+
+"""
+#  Store product list using Python list
+
+product = ["mobile","laptop", "ring", "bag" , "tshirt"]
+
+print(product) # printing complete list
+print(product[2]) # retrieving third element of list
+print(product[2:4]) #  retrieving  elements from 3-5  of list
+print(product[-1]) # retrieving last element of list
+
+product.append("shoes") # adding element in the list at last
+print(product)
+
+product.insert(2,"mango") #insering element at second position
+print(product)
+
+del(product[2]) # deleting element
+print(product)
+"""
+
+
+"""
+# Build login validation (valid vs invalid credentials)
+
+Valid_Username = "krishna"
+Valid_Password = "@123"
+
+username = input("Enter username")
+pwd      = input("Enter password")
+
+
+if username == Valid_Username and pwd == Valid_Password :
+    print("--login successful---")
+
+else:
+    print("Enter correct credentials")
+    
+"""
+
+"""
+#Loop through product list and print each item
+product = ["mobile","laptop", "ring", "bag" , "tshirt"]
+
+for i in product:
+    print(i,end=" ")
+
+"""
+
+"""
+
+#Create login function with parameters; return success/failure
+#1
+def login(username, password):
+
+    if username == "krishna" and password == "@123":
+        print("login successful")
+
+    else:
+        print("Please enter correct credential")
+
+
+login("krishna","@123")
+
+#2
+def login(username, password):
+
+    if username == "krishna" and password == "@123":
+        print("login successful")
+
+    else:
+        print("Please enter correct credential")
+
+
+user = input("Enter username")
+pwd  = input("Enter password")
+
+login(user,pwd)
+
+"""
+
+"""
+#Create product objects (id, name, price) and access values
+
+products =[
+
+    {"id":1, "name" : "laptop", "price" : 50000},
+    {"id":2, "name" : "mobile", "price" : 20000},
+    {"id":3, "name" : "mouse", "price" : 1000}
+]
+
+print(products)
+print(products[2])
+print(products[2]["id"])
+print(products[2]["id"])
+print(products[2]["name"])
+print(products[2]["price"])
+
+"""
+
+
+"""
+#Mini Project
+
+Valid_Username = "krishna"
+Valid_Password = "@123"
+
+username = input("Enter username")
+pwd      = input("Enter password")
+
+
+if username == Valid_Username and pwd == Valid_Password :
+    print("--login successful---")
+
+    cart = []
+
+    item1 = input("Enter first item")
+    cart.append(item1)
+
+    item2 = input("Enter second item")
+    cart.append(item2)
+
+    item3 = input("Enter third item")
+    cart.append(item3)
+
+    print(cart)
+    print("\nitems in cart")
+    for item in cart:
+        print(item)
+
+else:
+    print("Invalid username or password")
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
