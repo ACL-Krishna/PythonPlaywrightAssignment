@@ -3,7 +3,7 @@
 # Print name, age, boolean
 
 print("krishna")
-print(f"my age is : {39}")
+print(f"my age is : 39")
 
 name = "Krishna"
 age  =  35
