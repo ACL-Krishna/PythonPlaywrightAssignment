@@ -6,7 +6,7 @@ print("krishna")
 print(f"my age is : {39}")
 
 name = "Krishna"
-age  =  "35"
+age  =  35
 
 city =  "Pune"
 
