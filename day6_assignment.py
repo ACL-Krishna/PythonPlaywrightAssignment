@@ -40,7 +40,6 @@ def test_validate_google_login(playwright):
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://google.com")
-    print(f"Title of google login page : {page.title()}")
     assert page.title() == "Google" , f"Expected 'Google', got '{page.title()}'"
 
 def test_validate_login_saucedemo(playwright):
@@ -52,7 +51,6 @@ def test_validate_login_saucedemo(playwright):
     page.fill('input[id=user-name]', 'standard_user')
     page.fill('input[id="password"]', 'secret_sauce')
     page.click('input[id="login-button"]')
-    print(f"Title of saucedemo login page : {page.title()}")
     assert page.title() == 'Swag Labs' , f"Expected 'Swag Labs , got {page.title()}"
     # command for parallel execution : pytest -v -s -n 2 day6assignment.py
 
