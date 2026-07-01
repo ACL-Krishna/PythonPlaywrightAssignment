@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright, expect
 #       -------pytest fixture ----------
 @pytest.fixture(scope="session")
 def login_once(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -36,14 +36,14 @@ def test_pim(login_once):
 
 #       --------  Parallel Execution  ----------
 def test_validate_google_login(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://google.com")
     assert page.title() == "Google" , f"Expected 'Google', got '{page.title()}'"
 
 def test_validate_login_saucedemo(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://saucedemo.com")

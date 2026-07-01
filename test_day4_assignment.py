@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright, expect
 
 # ------Open Google, verify title using pytest ------
 def test_validate_google_login(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://google.com")
@@ -14,7 +14,7 @@ def test_validate_google_login(playwright):
 
 # -------Open saucedemo.com, locate username/password/login, print placeholder------
 def test_saucedemo(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://saucedemo.com")  #opening saucedemo.com,
@@ -30,7 +30,7 @@ def test_saucedemo(playwright):
 
 # ----------Perform login, validate success & error scenarios---------
 def test_login(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://saucedemo.com")
@@ -46,7 +46,7 @@ def test_login(playwright):
 
 # ---------Verify title, inventory visibility, product count ≥ 6 -----
 def test_saucedemo(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://saucedemo.com")
@@ -67,7 +67,7 @@ def test_saucedemo(playwright):
 
 #  -------Sort products, add items, validate cart of saucedemo.com in python with playwright----
 def test_saucedemo(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://saucedemo.com")
@@ -98,7 +98,7 @@ def test_saucedemo(playwright):
 
 # --------Checkout flow, validate confirmation------
 def test_saucedemo(playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://saucedemo.com")
