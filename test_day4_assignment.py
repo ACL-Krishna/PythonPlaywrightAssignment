@@ -2,7 +2,7 @@ import pytest
 from playwright.async_api import async_playwright
 from playwright.sync_api import sync_playwright, expect
 
-# ------Open Google, verify title using pytest ------
+# ------Open Google, verify title using pytest -------
 def test_validate_google_login(playwright):
     browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
